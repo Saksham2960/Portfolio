@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksham - Cybersecurity & Web Development</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Saksham</h1>
+            <p class="subtitle">Aspiring Cybersecurity & Web Development Enthusiast</p>
+            <p>BCA (Hons) Cybersecurity Student at Lovely Professional University (2024-2027)</p>
+            
+            <div class="nav-buttons">
+                <button class="nav-btn active" onclick="showSection('about')">About Me</button>
+                <button class="nav-btn" onclick="showSection('skills')">Skills</button>
+                <button class="nav-btn" onclick="showSection('projects')">Projects</button>
+                <button class="nav-btn" onclick="showSection('certifications')">Certifications</button>
+                <button class="nav-btn" onclick="showSection('contact')">Contact</button>
+            </div>
+        </header>
+
+        <section id="about" class="section active">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I am a highly motivated cybersecurity and web development enthusiast, 
+                constantly exploring new technologies. My academic journey at LPU has 
+                equipped me with knowledge in database management, programming, 
+                and security principles. I aim to leverage my technical expertise to 
+                develop secure and scalable digital solutions.
+            </p>
+            
+            <div class="education">
+                <h3>Education</h3>
+                <strong>BCA (Hons) Cybersecurity</strong><br>
+                Lovely Professional University<br>
+                2024 - 2027
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <p>C, SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Database Management</h3>
+                    <p>MySQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Core Concepts</h3>
+                    <p>Cybersecurity Fundamentals, Problem-Solving, Critical Thinking</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <p>Team Player, Project Management, Adaptability</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <p>English, Hindi</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            
+            <div class="project-card">
+                <h3>Flood Management Website</h3>
+                <p>
+                    A web application designed to provide users with real-time information on weather conditions, 
+                    flood risks, and community resources. By enhancing public awareness and encouraging community 
+                    involvement, the system aims to empower users to take proactive measures against flooding.
+                </p>
+                <div class="tech-stack">HTML, CSS, JavaScript</div><br>
+                <a href="https://github.com/Saksham2960/Flood-management-system" target="_blank" class="github-link">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>MED-AI (Front-end) Website</h3>
+                <p>
+                    AI-Driven Medical Service Webpage for Medicine Quality Testing, Emergency Hospital Locator, 
+                    and Chat box functionality.
+                </p>
+                <div class="tech-stack">HTML, CSS, JavaScript</div><br>
+                <a href="https://github.com/Saksham2960/MED-AI" target="_blank" class="github-link">
+                    View on GitHub →
+                </a>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <h2>Certifications & Achievements</h2>
+            
+            <h3>Certifications & Courses</h3>
+            <ul class="cert-list">
+                <li>SQL and Relational Database 101 from Cognitiveclass.ai</li>
+                <li>Ethical Hacking Workshop conducted in LPU</li>
+                <li>Attended IEEE workshop on EV's future</li>
+                <li>Attended Ethical Hacking workshop conducted by Secuneus in LPU</li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">CTF/Hackathon Participation</h3>
+            <ul class="cert-list">
+                <li><strong>Code-a-Haunt 2025</strong> - Participated in coding competition</li>
+                <li><strong>Chakravyuh CTF 2025</strong> - Engaged in real-world security challenges, applying ethical hacking techniques</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:Sakshamthakur930@gmail.com">Sakshamthakur930@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <a href="tel:+917876723516">+91-7876723516</a>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/saksham-rashpa-34102432a" target="_blank">Connect with me</a>
+                </div>
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/Saksham2960" target="_blank">View my repositories</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Add smooth scrolling effect
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add entrance animation
+            document.querySelector('header').style.opacity = '0';
+            document.querySelector('header').style.transform = 'translateY(-50px)';
+            
+            setTimeout(() => {
+                document.querySelector('header').style.transition = 'all 0.8s ease';
+                document.querySelector('header').style.opacity = '1';
+                document.querySelector('header').style.transform = 'translateY(0)';
+            }, 100);
+        });
+
+        // Add typing effect to the title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect on load
+        window.addEventListener('load', function() {
+            const title = document.querySelector('h1');
+            typeWriter(title, 'Saksham', 150);
+        });
+    </script>
+</body>
+</html>
